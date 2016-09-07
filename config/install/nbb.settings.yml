@@ -1,0 +1,4 @@
+club_id: 5
+date_format: "%e %B %Y om %H:%M"
+date_replace: "om 00:00"
+date_replace_with: ""

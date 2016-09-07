@@ -1,0 +1,17 @@
+drupal:
+    image: drupal:8.2.0-apache
+    ports:
+        - "8080:80"
+    volumes:
+        - .:/var/www/html/modules/nbb
+    links:
+        - mariadb:mysql
+mariadb:
+    image: mariadb:10.1
+    env_file: .env
+    environment:
+        # Fix https://goo.gl/fUTycl
+        MYSQL_HOST:
+    ports:
+        - "3306:3306"
+    restart: always
