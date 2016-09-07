@@ -98,6 +98,7 @@ class TeamStandingsBlock extends BlockBase {
 	public function blockForm($form, FormStateInterface $form_state) {
 		$form = parent::blockForm($form, $form_state);
 		$clubId = $this->getClubId();
+		$competitionId = $this->getCompetitionId();
 
 		$url = 'http://db.basketball.nl/db/json/team.pl?clb_ID=' . $clubId;
 		$ch = curl_init();
@@ -118,6 +119,7 @@ class TeamStandingsBlock extends BlockBase {
 			'#type' => 'select',
 			'#title' => 'Team',
 			'#options' => & $options,
+			'#default_value' => $competitionId,
 		];
 
 		return $form;
