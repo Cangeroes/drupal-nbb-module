@@ -68,6 +68,7 @@ class TeamStandingsBlock extends BlockBase {
 			$output .= '<thead><tr>';
 			$output .= '<th>Thuis ploeg</th>';
 			$output .= '<th>Uit ploeg</th>';
+			$output .= '<th>Stand</th>';
 			$output .= '<th>Datum</th>';
 			$output .= '</tr></thead>';
 			$output .= '<tbody>';
@@ -78,6 +79,7 @@ class TeamStandingsBlock extends BlockBase {
 				$output .= '<tr>';
 				$output .= '<td class="' . ($match['is_home'] ? 'active' : '') . '">' . $match['thuis_ploeg'] . '</td>';
 				$output .= '<td class="' . ($match['is_away'] ? 'active' : '') . '">' . $match['uit_ploeg'] . '</td>';
+				$output .= '<td>' . $match['score_thuis'] . ' - ' . $match['score_uit'] . '</td>';
 				$output .= '<td>' . $match['date'] . '</td>';
 				$output .= '</tr>';
 			}
