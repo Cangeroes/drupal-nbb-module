@@ -4,8 +4,8 @@
 
 ## Screenshots
 
-![Configure](src/img/configure.png)
-![Preview](src/img/preview.png)
+![Configure](assets/img/configure.png)
+![Preview](assets/img/preview.png)
 
 ## Install
 
